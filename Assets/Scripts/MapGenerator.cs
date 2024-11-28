@@ -4,21 +4,17 @@ public class MapGenerator : MonoBehaviour
 {
     public GameObject cube;
     public int width, height, large;
-    public int seed, detail;
+    public int detail;
+    public int seed;
 
     void Start()
     {
+        seed = Random.Range(0, 1000000);
         GenerateMap();
     }
 
     public void GenerateMap()
     {
-        // Limpia el mapa anterior
-        foreach (Transform child in transform)
-        {
-            Destroy(child.gameObject);
-        }
-
         for (int x = 0; x < width; x++)
         {
             for (int z = 0; z < large; z++)
