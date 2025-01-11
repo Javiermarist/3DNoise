@@ -8,6 +8,7 @@ public class Cubo : MonoBehaviour
         {
             Destroy(gameObject);
         }*/
+
         if (Physics.Raycast(transform.position, transform.up) &&
            Physics.Raycast(transform.position, -transform.up) &&
            Physics.Raycast(transform.position, transform.right) &&
